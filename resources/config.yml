@@ -1,0 +1,3 @@
+maxPlayers: 100
+allowedRanks: ["vip", "vip++"]
+allowedMainRanks: ["mod", "admin"]
