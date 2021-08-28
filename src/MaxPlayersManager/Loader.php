@@ -28,7 +28,7 @@ class Loader extends PluginBase implements Listener {
     }
 
     public function onQuit(PlayerQuitEvent $event){
-        if(!Main::getInstance()->ranksManager->getPlayer($event->getPlayer())->send) $event->setQuitMessage("");
+        if(!Main::getInstance()->ranksManager->getPlayer($event->getPlayer())) $event->setQuitMessage("");
     }
 
     /**
@@ -36,7 +36,7 @@ class Loader extends PluginBase implements Listener {
      * @priority Highest
      */
     public function onJoin(PlayerJoinEvent $event){
-        if(!Main::getInstance()->ranksManager->getPlayer($event->getPlayer())->send) $event->setJoinMessage("");
+        if(!Main::getInstance()->ranksManager->getPlayer($event->getPlayer())) $event->setJoinMessage("");
     }
 
     public function proceedWithChecks(Player $player, GreekPlayer $greekPlayer){
